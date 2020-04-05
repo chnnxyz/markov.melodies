@@ -2,9 +2,10 @@
 import midiutil as mu
 import pandas
 import numpy as np
-melody = pandas.read_csv("uwu.csv")
+melody = pandas.read_csv("melody.csv")
 array=melody.to_numpy()
 note=array[:,2]
+note=note.astype(int)
 dur=array[:,3]
 track=0
 channel=0
@@ -12,14 +13,19 @@ time=0
 tempo=90
 duration=1
 dur2=np.cumsum(dur)
+dur3=np.insert(dur2,0,0,0)
+dur3=dur3[0:19]
 volume=100
+testvar=[(note[i],dur[i]) for i in range(0,len(note))]
 
 MyMIDI=mu.MIDIFile(1)
 
 MyMIDI.addTempo(track,time,tempo)
-for x,pitch in enumerate(note):
-        MyMIDI.addNote(track,channel,pitch,time+x,y,volume)
+
+for pitch,y in testvar:
+    MyMIDI.addNote(track,channel,pitch,time,y,volume)
+    time=time+y
             
             
-with open("test.mid","wb") as output_file:
+with open("melody.mid","wb") as output_file:
     MyMIDI.writeFile(output_file)
