@@ -33,7 +33,7 @@ markovNormalize<-function(m){
   }
 }
 
-markovMelodyRandomInit<-function(root="c",mode="ionian",sigTop=4,sigBot=4,stopAfterBars=32,noteLengthDist=rep(1,11)/11){
+markovMelodyRandomInit<-function(root="c",mode="ionian",sigTop=4,sigBot=4,stopAfterBars=32,noteLengthDist=rep(1,11)/11,transMatrix){
   ref<-NULL
   startref<-sample(1:22,size=1)
   switch(root,"c"={ref<-60},"c#"={ref<-61},"db"={ref<-61},"d"={ref<-62},
@@ -68,6 +68,36 @@ markovMelodyRandomInit<-function(root="c",mode="ionian",sigTop=4,sigBot=4,stopAf
   state<-NULL ##Defining state (matrix row) vector
   note<-NULL ##Defining Note vector (isomorphous to state)
   dur<-NULL ##Defining note duration vector
-  ##Cont from here
+  state[1]<-startref
+  note[1]<-startnote
+  dur[1]<-sample(durvec,prob=noteLengthDist,size=1)
+  i<-2
+  while(sum(dur)<=stopAfterBars*sigTop*sigBot){
+    dur[i]<-sample(durvec,prob=noteLengthDist,size=1)
+    state[i]<-sample(1:22,prob=transMatrix[state[i-1],],size=1)
+    note[i]<-refv[state[i]]
+    i<-i+1
+  }
+  df<-data.frame(state=state,note=note,duration=dur)
+  result<-NULL
+  result$root<-root
+  result$mode<-mode
+  result$sigTop<-sigTop
+  result$sigBot<-sigBot
+  result$bars<-stopAfterBars
+  result$lengthDistribution<-noteLengthDist
+  result$transitionMatrix<-transMatrix
+  result$initialNote<-startnote
+  result$melody<-df
+  
+  return(result)
+}
 
+melodyPlot<-function(x){
+  df<-x$melody
+  par(mfrow=c(2,2))
+  hist(df$note,main="Note Distribution")
+  plot(df$note,type="l",main="Note chain")
+  plot(x=cumsum(df$duration),y=df$note,type="l",main="Time-weighted Note Chain")
+  acf(df$note)
 }
