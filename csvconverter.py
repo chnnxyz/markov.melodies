@@ -10,17 +10,15 @@ track=0
 channel=0
 time=0
 tempo=90
-duration=np.sum(dur)
+duration=1
 dur2=np.cumsum(dur)
 volume=100
 
 MyMIDI=mu.MIDIFile(1)
 
 MyMIDI.addTempo(track,time,tempo)
-for x in note:
-    for y in dur:
-        for z in dur2:
-            MyMIDI.addNote(track,channel,x,time+z,y,volume)
+for x,pitch in enumerate(note):
+        MyMIDI.addNote(track,channel,pitch,time+x,y,volume)
             
             
 with open("test.mid","wb") as output_file:
