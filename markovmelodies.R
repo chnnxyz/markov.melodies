@@ -72,7 +72,7 @@ markovMelodyRandomInit<-function(root="c",mode="ionian",sigTop=4,sigBot=4,stopAf
   note[1]<-startnote
   dur[1]<-sample(durvec,prob=noteLengthDist,size=1)
   i<-2
-  while(sum(dur)<=stopAfterBars*sigTop*sigBot){
+  while(sum(dur)<=stopAfterBars*sigTop){
     dur[i]<-sample(durvec,prob=noteLengthDist,size=1)
     state[i]<-sample(1:22,prob=transMatrix[state[i-1],],size=1)
     note[i]<-refv[state[i]]
@@ -100,4 +100,9 @@ melodyPlot<-function(x){
   plot(df$note,type="l",main="Note chain")
   plot(x=cumsum(df$duration),y=df$note,type="l",main="Time-weighted Note Chain")
   acf(df$note)
+}
+
+melodyToCSV<-function(x,filename="melody.csv"){
+  df<-x$melody
+  write.csv(df,filename)
 }
