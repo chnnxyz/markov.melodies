@@ -33,8 +33,9 @@ markovNormalize<-function(m){
   }
 }
 
-markovMelodyRandomInit<-function(root="c",mode="ionian",sigTop=4,sigBot=4,stopAfterBars=32){
+markovMelodyRandomInit<-function(root="c",mode="ionian",sigTop=4,sigBot=4,stopAfterBars=32,noteLengthDist=rep(1,11)/11){
   ref<-NULL
+  startref<-sample(1:22,size=1)
   switch(root,"c"={ref<-60},"c#"={ref<-61},"db"={ref<-61},"d"={ref<-62},
          "d#"={ref<-63},"eb"={ref<-63},"e"={ref<-64},"f"={ref<-65},
          "f#"={ref<-66},"gb"={ref<-66},"g"={ref<-67},"g#"={ref<-68},
@@ -61,7 +62,12 @@ markovMelodyRandomInit<-function(root="c",mode="ionian",sigTop=4,sigBot=4,stopAf
     refv<-c(ref,ref+1,ref+3,ref+5,ref+6,ref+8,ref+10,ref+12,ref+13,ref+15,ref+17,ref+18,ref+20,ref+22,ref+24,ref+25,ref+27,ref+29,ref+30,ref+32,ref+34,ref+36)
   })
   
+  startref<-sample(1:22,size=1) ## Generates vector position for start note
+  startnote<-refv[startref] ##Provides number for start note
   durvec<-c(1,3/4,1/2,3/8,1/4,3/16,1/8,3/32,1/16,3/64,1/32)*sigBot
-  return(refv)
-  ## Continue from here: to program: DF and Markov Chain
+  state<-NULL ##Defining state (matrix row) vector
+  note<-NULL ##Defining Note vector (isomorphous to state)
+  dur<-NULL ##Defining note duration vector
+  ##Cont from here
+
 }
