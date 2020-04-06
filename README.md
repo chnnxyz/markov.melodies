@@ -15,4 +15,4 @@ The current python script is used for converting CSV files into MIDI files for u
 An examples folder provides some of the different results obtained. Currently it only covers random walks.
 
 ### Mathematical information
-The TeX document with the mathematical information for the project is on the works.
+MarkovMelodies.pdf contains all the mathematical information you might need.
