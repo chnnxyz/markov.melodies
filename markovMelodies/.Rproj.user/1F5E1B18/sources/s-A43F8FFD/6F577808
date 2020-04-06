@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586131360713.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6F577808",
+    "lastKnownWriteTime" : 1586132363,
+    "last_content_update" : 1586132363907,
+    "path" : "~/markovMelodies/man/markovMelodyRandomInit.Rd",
+    "project_path" : "man/markovMelodyRandomInit.Rd",
+    "properties" : {
+        "cursorPosition" : "3,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

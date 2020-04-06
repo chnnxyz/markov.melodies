@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586106383498.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3258707882",
+    "id" : "25AE0A8E",
+    "lastKnownWriteTime" : 1586131320,
+    "last_content_update" : 1586131320633,
+    "path" : "~/markovMelodies/man/markovNormalize.Rd",
+    "project_path" : "man/markovNormalize.Rd",
+    "properties" : {
+        "cursorPosition" : "4,28",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586132790028.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5275AD1",
+    "lastKnownWriteTime" : 1586132950,
+    "last_content_update" : 1586132951002,
+    "path" : "~/markovMelodies/man/melodyPlot.Rd",
+    "project_path" : "man/melodyPlot.Rd",
+    "properties" : {
+        "cursorPosition" : "15,83",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

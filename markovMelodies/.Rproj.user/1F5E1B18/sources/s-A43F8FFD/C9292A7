@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586105606275.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C9292A7",
+    "lastKnownWriteTime" : 1586106105,
+    "last_content_update" : 1586106105131,
+    "path" : "~/markovMelodies/man/randomWalk.Rd",
+    "project_path" : "man/randomWalk.Rd",
+    "properties" : {
+        "cursorPosition" : "31,0",
+        "scrollLine" : "8",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

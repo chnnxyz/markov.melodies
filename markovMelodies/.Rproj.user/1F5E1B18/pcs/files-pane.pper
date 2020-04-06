@@ -1,0 +1,9 @@
+{
+    "path" : "~/markovMelodies/man",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586133007777.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3148775130",
+    "id" : "E753EA19",
+    "lastKnownWriteTime" : 1586133284,
+    "last_content_update" : 1586133284317,
+    "path" : "~/markovMelodies/man/melodyToCSV.Rd",
+    "project_path" : "man/melodyToCSV.Rd",
+    "properties" : {
+        "cursorPosition" : "23,87",
+        "scrollLine" : "4",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}
