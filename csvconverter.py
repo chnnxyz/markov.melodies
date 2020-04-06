@@ -12,9 +12,6 @@ channel=0
 time=0
 tempo=90
 duration=1
-dur2=np.cumsum(dur)
-dur3=np.insert(dur2,0,0,0)
-dur3=dur3[0:19]
 volume=100
 testvar=[(note[i],dur[i]) for i in range(0,len(note))]
 
